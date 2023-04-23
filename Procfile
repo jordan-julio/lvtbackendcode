@@ -1,3 +1,2 @@
-release: node ace migration:run --force && node ace db:seed
-api: npm start
-web: npm start
+web: node build/server.js
+release: node build/ace migration:run --force
