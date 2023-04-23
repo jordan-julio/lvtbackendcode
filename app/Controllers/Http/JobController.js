@@ -61,10 +61,7 @@ class JobController {
     }
     
     if (data.images !== undefined) {
-      const imageUrls = await Promise.all(data.images.map(async (image) => {
-        const imageUrl = await storeImage(image)
-        return imageUrl
-      }))
+      const imageUrls = await storeImage(data.images[0])
       data.images = JSON.stringify(imageUrls) // Store the image URLs as JSON string
     }
     const job = await Job.create(data)
