@@ -8,7 +8,7 @@ class AddNewColumnToJobsSchema extends Schema {
     this.table('jobs', (table) => {
       // alter table
       table.string('thumbnail', 500)
-      table.json('images')
+      table.string('images', 500)
       table.string('takenby', 100)
     })
   }
