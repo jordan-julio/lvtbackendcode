@@ -5,21 +5,9 @@ const { storage, storeImage } = require('../../../config/gcs')
 
 class JobController {
   async index ({ request, auth, response }) {
-    try {
-      await auth.check()
-      const user = await auth.getUser()
-      if (user.type === 'Maker') {
         // Your existing code to fetch jobs and send response
-        const jobs = await Job.query().fetch()
-        return response.json(jobs)
-      } else {
-        // User does not have the role "maker", send error response
-        return response.status(403).json({ error: 'Forbidden' })
-      }
-    } catch (error) {
-      // Token is invalid, send error response
-      return response.status(401).json({ error: 'Invalid token' })
-    }
+    const jobs = await Job.query().fetch()
+    return response.json(jobs)
   }
   
   async getUserType ({ auth, response }) {
