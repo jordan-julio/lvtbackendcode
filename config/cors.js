@@ -1,7 +1,6 @@
 'use strict'
 
 module.exports = {
-  enabled: true,
   /*
   |--------------------------------------------------------------------------
   | Origin
@@ -17,7 +16,7 @@ module.exports = {
   | Function - Receives the current origin and should return one of the above values.
   |
   */
-  origin: true,
+  origin: 'lvtfrontend-me1x.vercel.app',
 
   /*
   |--------------------------------------------------------------------------
@@ -74,7 +73,7 @@ module.exports = {
   | boolean.
   |
   */
-  credentials: true,
+  credentials: false,
 
   /*
   |--------------------------------------------------------------------------
