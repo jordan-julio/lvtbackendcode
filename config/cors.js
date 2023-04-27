@@ -1,6 +1,7 @@
 'use strict'
 
 module.exports = {
+  enabled: true,
   /*
   |--------------------------------------------------------------------------
   | Origin
@@ -16,7 +17,7 @@ module.exports = {
   | Function - Receives the current origin and should return one of the above values.
   |
   */
-  origin: '*',
+  origin: true,
 
   /*
   |--------------------------------------------------------------------------
@@ -73,7 +74,7 @@ module.exports = {
   | boolean.
   |
   */
-  credentials: false,
+  credentials: true,
 
   /*
   |--------------------------------------------------------------------------
