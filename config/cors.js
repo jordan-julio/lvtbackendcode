@@ -16,7 +16,7 @@ module.exports = {
   | Function - Receives the current origin and should return one of the above values.
   |
   */
-  origin: "https://lvtfrontend-me1x.vercel.app",
+  origin: ["https://lvtfrontend-me1x.vercel.app", "https://lvtfrontend-me1x-q1yi1vqtu-jordan-julio.vercel.app"],
 
   /*
   |--------------------------------------------------------------------------
