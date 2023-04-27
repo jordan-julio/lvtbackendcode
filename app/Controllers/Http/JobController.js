@@ -40,10 +40,7 @@ class JobController {
       'budget',
       'user_id'
     ])
-    const user = await auth.getUser()
-    if (user) {
-      data.user_id = user.id;
-    }
+    
     // Upload thumbnail image  
     // Convert the base64 thumbnail to buffer and store in Google Cloud Storage
     if (data.thumbnail !== undefined) {
