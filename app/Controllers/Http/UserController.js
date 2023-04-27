@@ -41,7 +41,7 @@ class UserController {
         const token = await auth.attempt(email, password)
 
         // Return token in response
-        return response.status(200).json({ success: 'User logged in successfully!', token: token.token, user: user.username });
+        return response.status(200).json({ success: 'User logged in successfully!', token: token.token, user: user.username, userId: user.id });
       } else {
         // Password is not valid, send error response
         return response.status(401).json({ error: 'Invalid email or password' });
