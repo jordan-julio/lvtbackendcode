@@ -57,12 +57,12 @@ class JobController {
     // Convert the base64 thumbnail to buffer and store in Google Cloud Storage
     if (data.thumbnail !== undefined) {
       const thumbnailUrl = await storeImage(data.thumbnail[0])
-      data.thumbnail = JSON.stringify(thumbnailUrl) // Store the thumbnail URL
+      data.thumbnail = thumbnailUrl // Store the thumbnail URL
     }
     
     if (data.images !== undefined) {
       const imageUrls = await storeImage(data.images[0])
-      data.images = JSON.stringify(imageUrls) // Store the image URLs as JSON string
+      data.images = imageUrls // Store the image URLs as JSON string
     }
     const job = await Job.create(data)
   

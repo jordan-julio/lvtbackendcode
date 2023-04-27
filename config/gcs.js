@@ -40,6 +40,7 @@ async function storeImage(imageBase64) {
 
         // Return the public URL of the stored image
         const imageUrl = `https://storage.googleapis.com/${bucket.name}/${fileName}`
+
         return imageUrl
     } catch (error) {
         console.error(error)
