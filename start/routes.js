@@ -17,7 +17,7 @@
 const Route = use('Route')
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
