@@ -6,7 +6,7 @@ const { Storage } = require('@google-cloud/storage')
 
 const storage = new Storage({
     projectId: 'meyditpreinterview',
-    keyFilename: '../google-credentials.json',
+    keyFilename: 'google-credentials.json',
     bucket: 'meyditbucket', // specify your bucket name here
     // other optional configuration settings:
     // storageClass: '<your-storage-class>',
