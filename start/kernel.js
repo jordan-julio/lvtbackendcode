@@ -55,6 +55,6 @@ const serverMiddleware = [
 ]
 
 Server
+  .use(serverMiddleware)
   .registerGlobal(globalMiddleware)
   .registerNamed(namedMiddleware)
-  .use(serverMiddleware)
