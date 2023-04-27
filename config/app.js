@@ -16,7 +16,7 @@ module.exports = {
   |
   */
 
-  name: Env.get('APP_NAME', 'AdonisJs'),
+  name: Env.get('APP_NAME', 'MeyditPreinterview'),
 
   /*
   |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ module.exports = {
     | values. Read documentation for that.
     |
     */
-    trustProxy: false,
+    trustProxy: true,
 
     /*
     |--------------------------------------------------------------------------

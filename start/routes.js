@@ -16,8 +16,9 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 const sgMail = require('@sendgrid/mail');
+const Env = use("Env");
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(Env.get("SENDGRID_API_KEY"));
 
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
